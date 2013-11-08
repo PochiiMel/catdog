@@ -1,0 +1,53 @@
+<style>
+	table td{
+		padding-left: 15px;
+
+	}
+</style>
+<ol class="breadcrumb">
+            <li><a href="/catdog/sistema/inicio">Inicio</a></li>
+            <li><a href="/catdog/medicinas/nuevaMedicina">Medicinas</a></li>
+            <li class="active">Editar medicina</li>
+</ol>
+<section>
+	<form action="/catdog/medicinas/guardarCambios" method="POST">
+	<fielset>
+		<legend>Editar Medicina </legend>
+			<!-- START listaEdicion -->
+			<table>
+				<tr>
+					<td><label>Id : </label></td>
+					<td><input type="text" class="form-control" name="idMedicinas" value="{idMedicinas}" readonly /></td>
+				</tr>
+				<tr>
+					<td><label>Nombre medicina: </label></td>
+					<td>
+						<input type="text" required class="form-control" name="nombreMedicina" value="{nombreMedicina}"/>
+					</td>
+				</tr>
+				<tr>
+					<td><label>Cantidad: </label></td>
+					<td><input type="text" required class="form-control" name="cantidad" value="{cantidad}"/></td>
+				</tr>
+				<tr>
+					<td><label>Medida: </label></td>
+					<td>
+						<select name="idMedida" class="form-control">
+							<option value="5">Mililitros </option>
+							<option value="6">Cajas </option>
+							<option value="7">Ampolletas </option>
+						</select>
+					</td>
+				</tr>
+				<tr>
+				<td></td>
+					<td>
+					<br/>
+						<input type="submit" class="btn btn-primary" value="Finalizar edici&oacute;n" />
+					</td>
+				</tr>
+			</table>
+			<!-- END listaEdicion -->
+	</fielset>
+</form> 
+</section>

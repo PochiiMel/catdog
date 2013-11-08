@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Iniciar sesi&oacute;n</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <style>
+    #login-form * {
+      margin: 5px;
+    }
+
+    #login-form{
+      border: solid 1px #D3D3D3;
+      padding: 50px 50px 50px 50px;
+      border-radius: 8px 8px 8px 8px;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="alert alert-danger">
+        <strong>Ups! lo sentimos.</strong> Usuario o clave incorrecto
+    </div>
+    <div class="container" style="width:500px;margin-top:100px;">
+      <form class="form-signin" id="login-form">
+        <div class="form-group">
+          <h2 class="form-signin-heading">Iniciar sesi&oacute;n</h2>
+          <label for="user">Usuario</label>
+          <input type="text" id="user" class="form-control" placeholder="Usuario" autofocus>
+          <label for="password">Clave</label>
+          <input type="password" id="password" class="form-control" placeholder="Clave">
+          <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
+        </div>
+      </form>
+    </div> <!-- /container -->
+
+    <script src="static/js/jquery.min.js"></script>
+    <script src="static/bootstrap/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

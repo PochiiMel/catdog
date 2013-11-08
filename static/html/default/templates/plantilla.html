@@ -1,0 +1,53 @@
+<html>
+	<head>
+	</head>
+	<body>
+		<script>
+			var url = new url_handler();
+			url.initialize();
+			if(url.isKey("id")){
+				alert(url.getValue("id"));
+			}
+
+			function validar(event){
+				event.preventDefault();
+				var uri = "/catdog/usuarios/verificar";
+				var NOMBRE = $("#nomb").val().trim();
+				var ajaxrq = $.post(uri,{nombre:NOMBRE},function(data){
+					if(data.estado=="FOUND"){
+						$("#ajax").html("Existe");
+					}else{
+						$("#ajax").html("No existe");
+					}
+				},"json");
+			}
+		</script>
+		<section>
+			<form action="/catdog/usuarios/guardar" method="POST">
+				Ingrese su nombre: <br />
+				<input name="nombre" id="nomb" type="text" onkeyup="validar(event);" /><span id="ajax"></span>
+				<br/>
+				Apellidos: <input name="apellidos" type="text" />
+				<br />
+				
+				<input type="submit" value="ingresar" />
+
+			</form>
+		</section>
+		<table>
+			<tr>
+				<td>id </td>
+				<td>Nombre </td>
+				<td>Apellidos</td>
+			</tr>
+			<!-- START lista --> 
+			<tr>
+				<td>{idUsuarios} </td>
+				<td>{nombre}    </td>
+				<td>{apellidos}		</td>
+			</tr>
+			<!-- END lista -->
+		</table>
+		{contenido}
+	</body>
+</html>

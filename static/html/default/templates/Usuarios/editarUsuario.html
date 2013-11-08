@@ -1,0 +1,76 @@
+<style>
+	table td{
+		padding-left: 15px;
+
+	}
+</style>
+<ol class="breadcrumb">
+            <li><a href="/catdog/sistema/inicio">Inicio</a></li>
+            <li><a href="/catdog/usuarios/nuevoUsuario">Usuarios</a></li>
+            <li class="active">Editar Usuario</li>
+</ol>
+<section>
+	<form action="/catdog/usuarios/guardarCambios" method="POST">
+	<fielset>
+		<legend>Editar Usuario </legend>
+			<!-- START listaEdicionUser -->
+			<table>
+				<tr>
+					<td><label>Id : </label></td>
+					<td><input type="text" class="form-control" name="idusuarios" value="{idusuarios}" readonly /></td>
+				</tr>
+				<tr>
+					<td><label>Nick Name: </label></td>
+					<td>
+						<input type="text" required class="form-control" name="nickname" value="{nickname}"/>
+					</td>
+				</tr>
+				
+				<tr>
+					<td><label>Password: </label></td>
+					<td>
+						<input type="password" required class="form-control" name="password" value="{password}"/>
+					</td>
+				</tr>
+				
+				<tr>
+					<td><label>Nombres: </label></td>
+					<td>
+						<input type="text" required class="form-control" name="nombre" value="{nombre}"/>
+					</td>
+				</tr>
+				<tr>
+					<td><label>Apellidos: </label></td>
+					<td>
+						<input type="text" required class="form-control" name="apellidos" value="{apellidos}"/>
+					</td>
+				</tr>
+				
+				<tr>
+					<td><label>Tipo Usuario: </label></td>
+					<!-- END listaEdicionUser -->
+				
+				<td>
+					<select name="tipoUsuario" class="form-control">
+							<!-- START comboU -->
+							<option value="{idtipoUsuario}">{tipoUsuario} </option>
+							<!-- END comboU -->
+					</select>
+				</td>
+
+
+				
+
+				</tr>
+				<tr>
+				<td></td>			
+					<td>
+					<br/>
+						<input type="submit" class="btn btn-primary" value="Finalizar edici&oacute;n" />
+					</td>
+				</tr>
+			</table>
+			
+	</fielset>
+</form> 
+</section>

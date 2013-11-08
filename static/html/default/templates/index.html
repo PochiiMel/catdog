@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+
+    <title></title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{resource}static/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <div class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#">Cat&Dog</a>
+            </div>
+            <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Inicio</a></li>
+                <!--<li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Insumos<b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Nuevo Insumo</a></li>
+                    <li><a href="#">Tipo de insumos</a></li>
+                    <li><a href="#">Lista insumos</a></li>
+                    <li class="divider"></li>
+                    <li class="dropdown-header">Nav header</li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+                </li>-->
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="{resource}static/img/01.png"  alt="First slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Fundaci&oacute;n CatDog El Salvador</h1>
+              <p>Concientización-Rescate-Rehabilitación-Adopción.</p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="{resource}static/img/02.png" alt="Second slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>No los abandones</h1>
+              <p>Dales una segunda oportunidad</p>
+            
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="{resource}static/img/03.png"  alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Cat&Dog El Salvador</h1>
+              <p>fundación sin fines de lucro que se mantiene con las donaciones de todas aquellas personas que han decidido hablar por aquellos que no tienen voz.</p>
+           
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div><!-- /.carousel -->
+
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+    <br />
+    <br />
+    <br />
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <img class="img-circle" src="{resource}static/img/peludos.png" style="background:#F3F3F3;padding:30px;"  alt="Generic placeholder image">
+          <p><br/>Panel de administraci&oacute;n de los peluditos en el refugio.</p>
+          <p>
+            <a class="btn btn-default" href="/catdog/fichaPaciente/nuevoPeludo">Nuevo &raquo;</a>
+            <a class="btn btn-default" href="/catdog/fichaPaciente/listadoPeludo">Listado &raquo;</a>
+          </p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="{resource}static/img/insumos.png" style="background:#F3F3F3;padding:30px;" alt="Generic placeholder image">
+          <p><br/>Administraci&oacute;n de insumos de los peludos</p>
+          <p>
+            <a class="btn btn-default" href="/catdog/insumos/panel">Insumos &raquo;</a>
+            <a class="btn btn-default" href="/catdog/tipoInsumos/panel">Tipo insumos &raquo;</a>
+          </p>
+          <p>
+            <a class="btn btn-default" href="/catdog/donaciones/panel">Donaciones &raquo;</a>
+            <a class="btn btn-default" href="/catdog/tipoDonacion/panel">Tipo de donaci&oacute;n &raquo;</a>
+          </p>
+          <p>
+            <a class="btn btn-default" href="/catdog/medicinas/nuevaMedicina">Medicina &raquo;</a>
+          </p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="{resource}static/img/usuarios.png" style="background:#F3F3F3;padding:30px;" alt="Generic placeholder image">
+          <p><br/>Administraci&oacute;n de los usuarios del sistema.</p>
+          <p>
+              <a class="btn btn-default" href="/catdog/usuarios/nuevoUsuario">Usuarios &raquo;</a>
+             
+          </p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+      <!-- START THE FEATURETTES -->
+      <br />
+      <br />
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Volver arriba</a></p>
+        <p>&copy; 2013 Cat&Dog, SV. &middot;</p>
+      </footer>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{resource}static/bootstrap/assets/js/jquery.js"></script>
+    <script src="{resource}static/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="{resource}static/bootstrap/assets/js/holder.js"></script>
+  </body>
+</html>

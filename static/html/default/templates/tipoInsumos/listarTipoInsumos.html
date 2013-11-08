@@ -1,0 +1,36 @@
+<ol class="breadcrumb">
+            <li><a href="/catdog/sistema/inicio">Inicio</a></li>
+            <li><a href="/catdog/tipoInsumos/panel">Panel de tipo Insumo</a></li>
+            <li class="active">Lista de tipos de insumos</li>
+</ol>
+<table class="table table-striped table-bordered">
+
+	<tr>
+		<td>Tipo Insumo</td><td>Medida</td><td></td>
+	</tr>
+
+	<!-- START lista_tipoInsumos -->
+		<tr>
+			<td>{tipoInsumo}</td><td>{nombreMedida}</td><td>
+			<a href="/catdog/tipoInsumos/listarTipoInsumos?id={idtipoInsumos}">
+				<i class="glyphicon glyphicon-remove"></i>
+				Eliminar
+			</a>
+				|
+			<a href="/catdog/tipoInsumos/modificarTipoInsumos?id={idtipoInsumos}">
+				<i class="glyphicon glyphicon-edit"></i>
+				Modificar
+			</a>
+		</td>
+		</tr>
+	<!-- END lista_tipoInsumos -->
+
+</table>
+<button class="btn btn-primary" onclick="verLista(event);">Nuevo tipo</button>
+<script>
+	function verLista(event)
+	{
+		event.preventDefault();
+		location.href="/catdog/tipoInsumos/formularioIngreso";
+	}
+</script>

@@ -1,0 +1,113 @@
+<!-- START ficha -->
+<form name="frmEditarFicha" method="POST" action="/catdog/fichaPaciente/guardarCambios">
+	<fieldset>
+		<div class="panel-heading" style="background-color: rgb(245, 245, 245);">
+			<h3>Editar ficha</h3>
+		</div>
+		<div class="panel-body">
+		<table style="margin: 0 auto;text-align:right;">
+			<tr>
+				<td>*Nombre: </td>
+				<td><input type="text" class="form-control" name="nombrePeludo" value="{nombrePeludo}" autofocus maxlength="45" required /></td>
+			</tr>
+			<tr>
+				<td>*Edad estimada: </td>
+				<td><input type="text" class="form-control" value="{edadEstimada}" name="edadEstimada" maxlength="2" required />
+					<input type="radio" name="medidaEdad" checked="checked" value="3">A&ntilde;os </input>
+					<input type="radio" name="medidaEdad" value="4">Meses </input>
+				</td>
+			</tr>
+			<tr>
+				<td>Peso (en libras):</td>
+				<td><input type="text" name="Peso" value="{Peso}" maxlenght="8" class="form-control" /></td>
+			</tr>
+			<tr>
+				<td>*Motivo de entrada: </td>
+				<td>
+					<textarea columns="10" class="form-control" rows="6" name="motivoEntrada" required>
+						{motivoEntrada}
+					</textarea>
+				</td>
+			</tr>
+			<tr>
+				<td>*Motivo de salida: </td>
+				<td>
+					<textarea columns="10" class="form-control" rows="6" name="motivoSalida" required>
+						{motivoSalida}
+					</textarea>
+				</td>
+			</tr>
+			<input type="hidden" name="idfichaPaciente" value="{idfichaPaciente}" />
+<!-- END ficha -->
+			<tr>
+				<td>*Raza: </td>
+				<td>
+					<select name="raza">
+						<!-- START razaPeludos -->
+						<option value="{idrazas}">{nombreRaza} </option>
+						<!-- END razaPeludos -->
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>*Especie: </td>
+				<td>
+					<select name="especie" class="form-control">
+						<!-- START especiePeludos -->
+						<option value="{idespecie}">{nombreEspecie} </option>
+						<!-- END especiePeludos -->
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>*Castrado:</td>
+				<td>
+					<input type="radio" name="castrado" checked="checked" value="Si">S&iacute; </input>
+					<input type="radio" name="castrado" value="No">No </input>
+					<input type="radio" name="castrado" value="No se sabe">No se sabe </input>
+				</td>
+			</tr>
+			<tr>
+				<td>*Desparasitado:</td>
+				<td>
+					<input type="radio" name="desparasitado" checked="checked" value="Si">S&iacute; </input>
+					<input type="radio" name="desparasitado" value="No">No </input>
+					<input type="radio" name="desparasitado" value="No se sabe">No se sabe </input>
+				</td>
+			</tr>
+			<tr>
+				<td>*Est&aacute; en tratamiento?</td>
+				<td>
+					<input type="radio" name="enTratamiento" checked="checked" value="Si">S&iacute; </input>
+					<input type="radio" name="enTratamiento" value="No">No </input>
+					<input type="radio" name="enTratamiento" value="No se sabe">No se sabe </input>
+
+				</td>
+			</tr>
+			<tr>
+				<td>Padrino</td>
+				<td>
+					<select name="padrino" class="form-control">
+					<!-- START padrinosPeludos -->
+						<option value="{idpadrinos}">{nombrePadrino}</option>
+					<!-- END padrinosPeludos -->
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>*En proceso de adopci&oacute;n?</td>
+				<td>
+					<input type="radio" name="procesoAdopcion" checked="checked" value="Si">S&iacute; </input>
+					<input type="radio" name="procesoAdopcion" value="No" >No </input>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" style="padding-top:20px;">
+					<input type="submit" value="Actualizar peludo" class="btn btn-primary" />
+				</td>
+			</tr>
+
+		</table>
+		</div>
+	</fieldset>
+</form>

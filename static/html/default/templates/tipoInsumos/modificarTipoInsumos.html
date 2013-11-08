@@ -1,0 +1,42 @@
+<style>
+	table td{
+		padding-left: 15px;
+	}
+</style>
+<form action="/catdog/tipoInsumos/GuardarModificarTipoInsumos" method="POST" >
+	<table >
+
+	<!-- START lista_modificar -->
+		<tr>
+			<td><label>Id : </label></td><td><input type="text" class="form-control" name="idtipoInsumos" value="{idtipoInsumos}" readonly /></td>
+		</tr>
+
+		<tr>
+			<td><label>Tipo Insumo</label></td><td><input type="text" class="form-control" name="tipoInsumo" value="{tipoInsumo}"/></td>
+		</tr>
+
+		<tr>
+			<td><label>Medida: </label></td>
+			<td>
+
+				<select name="idMedida" class="form-control">
+						<!-- START combo -->
+						<option value="{idmedidas}">{nombreMedida} </option>
+						<!-- END combo -->
+				</select>
+
+
+			</td>
+		</tr>
+
+	<!-- END lista_modificar -->
+
+		<tr>
+			<td colspan="2" style="text-align:right">
+				<br/>
+				<input type="reset" value="Limpiar" class="btn btn-default"/>
+				<input type="submit" value="Guardar" class="btn btn-primary"/>	
+			</td>
+		</tr>
+	</table>
+</form>

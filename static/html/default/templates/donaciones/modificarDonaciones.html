@@ -1,0 +1,86 @@
+
+<style>
+	table td{
+		padding-left: 15px; 
+	}
+</style>
+<form action="/catdog/donaciones/GuardarModificarDonaciones" method="POST" >
+	<table>
+
+		<tr>
+			<td><label>Insumo: </label></td>
+			<td>
+				<select name="idinsumos" class="form-control">
+						<!-- START combo -->
+						<option value="{idinsumos}">{nombre_insumo}</option>
+						<!-- END combo -->
+				</select>
+			</td>
+			<td>
+				<!-- START insumo_actual -->
+				<strong>Valor actual:</strong>
+				<p>{nombre_insumo}</p>
+				<!-- END insumo_actual -->
+			</td>
+		</tr>
+
+		<tr>
+			<td><label>Tipo Donacion: </label></td>
+			<td>
+				<select name="tipoDonacion" class="form-control">
+						<!-- START comboDonacion -->
+						<option value="{idtipoDonacion}">{tipoDonacion}</option>
+						<!-- END comboDonacion -->
+				</select>
+			</td>
+			<td>
+				<!-- START donacion_actual -->
+				<strong>Valor actual:</strong>
+				<p>{tipoDonacion}</p>
+				<!-- END donacion_actual -->
+			</td>
+		</tr>
+
+<!-- START lista_modificar -->
+		<input type="hidden" name="idDonacion" value="{idDonacion}" />
+		<tr>
+			<td><label>Cantidad: </label></td>
+						
+			<td>
+				<input type="text" name="cantidadDonacion" class="form-control" value="{cantidadDonacion}" required/>
+					
+
+			</td>
+		</tr>
+
+		<tr>
+			<td><label>Fecha Donaci&oacute;n: </label></td>
+						
+			<td>
+				<input type="date" name="fechaDonacion" class="form-control" value="{fechaDonacion}" required/>
+					
+
+			</td>
+		</tr>
+
+		<tr>
+			<td><label>Donador: </label></td>
+						
+			<td>
+				<input type="text" name="donador" class="form-control" value="{donador}" />
+					
+
+			</td>
+		</tr>
+		
+		<!-- END lista_modificar -->
+
+		<tr>
+			<td colspan="2" style="text-align:right;">
+				<br/>
+				<input type="reset" value="Limpiar" class="btn btn-default"/>
+				<input type="submit" value="Guardar" class="btn btn-primary"/>	
+			</td>
+		</tr>
+	</table>
+</form>

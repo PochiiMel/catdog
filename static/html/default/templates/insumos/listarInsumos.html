@@ -1,0 +1,24 @@
+<ol class="breadcrumb">
+            <li><a href="/catdog/sistema/inicio">Inicio</a></li>
+            <li><a href="/catdog/insumos/panel">Panel</a></li>
+            <li class="active">Lista de insumos</li>
+</ol>
+<table class="table table-striped table-bordered">
+
+	<tr>
+		<td>Insumo</td><td>Cantidad</td><td>Opciones</td>
+	</tr>
+
+	<!-- START lista_tipoInsumos -->
+		<tr>
+			<td>{nombre_insumo}</td><td>{cantidadTotal} {nombreMedida}</td><td>
+			<a href="/catdog/insumos/listarInsumos?id={idinsumos}"><i class="glyphicon glyphicon-remove"></i>
+				Eliminar</a>
+			|
+			<a href="/catdog/insumos/modificarInsumos?id={idinsumos}"><i class="glyphicon glyphicon-edit"></i>
+				Modificar</a>
+		</td>
+		</tr>
+	<!-- END lista_tipoInsumos -->
+
+</table>

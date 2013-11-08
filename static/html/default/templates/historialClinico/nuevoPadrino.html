@@ -1,0 +1,51 @@
+<section align="center">
+	<form action="/catdog/padrinos/guardar" method="POST">
+	<fielset>
+		<legend>Ingresar Datos de padrino </legend>
+			<table>
+				<tr>
+					<td>*Nombre completo:</td>
+					<td>
+						<input type="text" name="nombrePadrino" autofocus required />
+					</td>
+				</tr>
+				<tr>
+					<td>Tel&eacute;fono de contacto</td>
+					<td><input type="tel" name="telefonoContacto" /></td>
+				</tr>
+				<tr>
+					<td>E-mail</td>
+					<td><input type="email" name="email" /></td>
+				</tr>
+				<tr>
+					<td>
+						<input type="submit" value="Registrar padrino" />
+					</td>
+				</tr>
+			</table>
+	</fielset>
+
+	<fieldset>
+		<legend>Opciones </legend>
+		<table>
+			<tr>
+				<td align="center">C&oacute;digo padrino:         </td>
+				<td align="center">Nombre:	     		          </td>
+				<td align="center">Tel&eacute;fono de contacto    </td>
+				<td align="center">E-mail			    		  </td>
+				<td align="center">Opciones						  </td>
+			</tr>
+			<!-- START listaPadrinos -->
+				<tr>
+					<td align="center">{idpadrinos} </td>
+					<td align="center">{nombrePadrino} </td>
+					<td align="center">{telefonoContacto} </td>
+					<td align="center">{email} 			  </td>
+					<td align="center"><a href="/catdog/padrinos/editar?id={idpadrinos}">Editar</a> | <a href="/catdog/padrinos/eliminar?id={idpadrinos}">Eliminar</a>
+					</td>
+				</tr>
+			<!-- END listaPadrinos -->
+		</table>
+	</fieldset>
+</form> 
+</section>

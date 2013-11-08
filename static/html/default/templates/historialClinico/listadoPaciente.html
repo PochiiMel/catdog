@@ -1,0 +1,68 @@
+
+<ol class="breadcrumb">
+            <li><a href="/catdog/sistema/inicio">Inicio</a></li>
+            <li class="active">Listado de peludos</li>
+</ol>
+<h3>Listado de pacientes <a href="#"> Total <span class="badge">{cant}</span></a></h3>
+
+<section>
+
+<div>
+	<form class="navbar-form navbar-right" role="search">
+      <div class="form-group">
+        <input type="text" name="filtro" class="form-control" placeholder="Nombre del peludo">
+      </div>
+      <button type="submit" class="btn btn-primary">Buscar</button>
+    </form>
+</div>
+{paginacion}
+	<table class="table table-striped table-bordered">
+		<thead>
+			<tr>
+				<td>Id</td>
+				<td>Nombre</td>
+				<td>Genero</td>
+				<td>Edad estimada</td>
+				<td>Ingres&oacute;</td>
+				<td>Peso</td>
+				<td>Raza</td>
+				<td>Acciones</td>
+			</tr>
+		</thead>
+		<!-- START listadoPeludos -->
+			<tr>
+				<td>{idfichaPaciente}</td>
+				<td>{nombrePeludo}</td>
+				<td>{Genero}</td>
+				<td>{edadEstimada} {_{medidaEdad}}</td>
+				<td>{fechaIngreso}</td>
+				<td>{Peso} lb</td>
+				<td>{{raza}}</td>
+				<td>
+					|
+					<a href="/catdog/historiaMedica/agregarDiagnostico?id={idfichaPaciente}">
+						<i class="glyphicon glyphicon-list-alt"></i> Diagnosticos 
+					</a>
+					|
+					<a href="/catdog/medicinasPaciente/agregar?idPaciente={idfichaPaciente}">
+						<i class="glyphicon glyphicon-plus-sign"></i> Medicamentos 
+					</a>
+					|
+					<a href="/catdog/fichaPaciente/editar?id={idfichaPaciente}">
+						<i class="glyphicon glyphicon-icon-pencil"></i> Editar ficha 
+					</a>
+				</td>
+			</tr>
+		<!-- END listadoPeludos -->
+	</table>
+	<button style="float:left;" class="btn btn-primary" onclick="verLista(event);">
+				Agregar peludito
+	</button>
+</section>
+<script>
+	function verLista(event)
+	{
+		event.preventDefault();
+		location.href="/catdog/fichaPaciente/nuevoPeludo";
+	}
+</script>

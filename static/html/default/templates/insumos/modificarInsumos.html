@@ -1,0 +1,53 @@
+<style>
+	table td{
+		padding-left: 15px;
+	}
+</style>
+<form action="/catdog/insumos/GuardarModificarInsumos" method="POST" >
+	<table >
+		<!-- START lista_modificar -->
+		<tr>
+			<td><label>Id : </label></td>
+			<td><input type="text" class="form-control" name="idtipoInsumos" value="{idinsumos}" readonly /></td>
+		</tr>
+		<tr>
+			<td><label>*Nombre de insumo:</label>
+			<td>
+				<input type="text" class="form-control" name="nombre_insumo" value="{nombre_insumo}" required />
+			</td>
+		</tr>
+		<tr>
+			<td><label>Cantidad: </label></td>
+			<td>
+				<input type="text" name="cantidadTotal" class="form-control" value="{cantidadTotal}" />
+			</td>
+		</tr>
+
+	<!-- END lista_modificar -->
+
+		<tr>
+			<td><label>Tipo Insumo: </label></td>
+			<td>
+				<select name="tipoInsumo" class="form-control">
+						<!-- START combo -->
+						<option value="{idtipoInsumos}">{tipoInsumo} </option>
+						<!-- END combo -->
+				</select>
+			</td>
+			<td>
+				<!-- START tipo_actual -->
+				<strong>Valor actual:</strong>
+				<p>{tipoInsumo}</p>
+				<!-- END tipo_actual -->
+			</td>
+		</tr>
+
+		<tr>
+			<td colspan="2" style="text-align:right;">
+				<br/>
+				<input type="reset" value="Limpiar" class="btn btn-default"/>
+				<input type="submit" value="Guardar" class="btn btn-primary"/>	
+			</td>
+		</tr>
+	</table>
+</form>

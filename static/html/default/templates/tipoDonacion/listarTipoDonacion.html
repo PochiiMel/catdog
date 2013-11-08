@@ -1,0 +1,34 @@
+<ol class="breadcrumb">
+            <li><a href="/catdog/sistema/inicio">Inicio</a></li>
+            <li><a href="/catdog/tipoDonacion/panel">Panel</a></li>
+            <li class="active">Lista de tipos</li>
+</ol>
+<table class="table table-striped table-bordered">
+
+	<tr>
+		<td>Tipo Donaci&oacute;n</td><td>Descripci&oacute;n</td><td></td>
+	</tr>
+
+	<!-- START lista_tipoDonacion -->
+		<tr>
+			<td>{tipoDonacion}</td><td>{descripcion}</td><td>
+			<a href="/catdog/tipoDonacion/listarTipoDonacion?id={idtipoDonacion}"><i class="glyphicon glyphicon-remove"></i>
+				Eliminar</a>
+			|
+			<a href="/catdog/tipoDonacion/modificarTipoDonacion?id={idtipoDonacion}"><i class="glyphicon glyphicon-edit"></i>
+				Modificar</a>
+		</td>
+		</tr>
+	<!-- END lista_tipoDonacion -->
+
+</table>
+<br />
+<button class="btn btn-primary" onclick="verLista(event);">Nuevo tipo</button>
+<br />
+<script>
+	function verLista(event)
+	{
+		event.preventDefault();
+		location.href="/catdog/TipoDonacion/formularioIngreso";
+	}
+</script>

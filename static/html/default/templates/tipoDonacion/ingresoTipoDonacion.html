@@ -1,0 +1,38 @@
+<style>
+	table td{
+		padding-left: 15px;
+	}
+</style>
+<ol class="breadcrumb">
+            <li><a href="/catdog/sistema/inicio">Inicio</a></li>
+            <li><a href="/catdog/tipoDonacion/panel">Panel</a></li>
+            <li class="active">Nuevo tipo</li>
+</ol>
+<button class="btn btn-primary" onclick="verLista(event);" style="float: right;">Lista de tipos</button>
+<br />
+<form action="/catdog/tipoDonacion/guardarTipoDonacion" method="POST" >
+	<table >
+		<tr>
+			<td><label>Tipo Donacion: </label></td><td><input class="form-control" type="text" name="tipoDonacion" /></td>
+		</tr>
+
+		<tr>
+			<td><label>Descripcion: </label></td><td><input class="form-control" type="text" name="descripcion" /></td>
+		</tr>
+
+		<tr>
+			<td colspan="2" style="text-align:right;">
+				<br/>
+				<input type="reset" value="Limpiar" class="btn btn-default"/>
+				<input type="submit" value="Guardar" class="btn btn-primary" />	
+			</td>
+		</tr>
+	</table>
+</form>
+<script>
+	function verLista(event)
+	{
+		event.preventDefault();
+		location.href="/catdog/tipoDonacion/formularioListar";
+	}
+</script>

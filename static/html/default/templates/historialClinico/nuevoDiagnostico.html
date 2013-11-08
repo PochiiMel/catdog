@@ -1,0 +1,81 @@
+<ol class="breadcrumb">
+            <li><a href="/catdog/sistema/inicio">Inicio</a></li>
+            <li><a href="/catdog/fichaPaciente/listadoPeludo">Listado de peludos</a></li>
+            <li class="active">Diagn&oacute;stico</li>
+</ol>
+<section >
+	<form action="/catdog/historiaMedica/guardar" method="POST">
+	<fielset>
+		<!-- START listaDatos -->
+			<h3>Datos del paciente</h3>
+			<table class="table" style="text-align:left;">
+				<tr>
+					<td><label>C&oacute;digo de paciente:</label></td>
+					<td>
+						<input type="text" class="form-control" name="idPaciente" value="{idfichaPaciente}" readonly />
+					</td>
+				</tr>
+				<tr>
+					<td><label>Nombre del paciente:</label></td>
+					<td>
+						<input type="text" class="form-control" name="nombrePeludo" value="{nombrePeludo}" readonly />
+					</td>
+				</tr>
+				<tr>
+					<td><label>G&eacute;nero (H: Hembra M: Macho): </label></td>
+					<td>
+						<input type="text" class="form-control" name="Genero" value="{Genero}" readonly /> 
+					</td>
+				</tr>
+				<tr>
+			<table>
+			<!-- END listaDatos -->
+			</form>
+	</fieldset>
+	<form action="/catdog/historiaMedica/guardar" method="POST">
+		<input type="hidden" value="{paciente}" name="idPaciente"/>
+		<h3>Diagn&oacute;stico </h3>
+		<table class="table">
+			<tr>
+					<td><label>*Diagn&oacute;stico recibido:</label></td>
+					<td>
+						<textarea name="diagnosticoClinico" required class="form-control" cols="30" rows="10"></textarea>
+					</td>
+			</tr>
+			<tr>
+					<td><label>*Fecha del diagn&oacute;stico:</label></td>
+					<td>
+						<input type="date" class="form-control" required name="fechaDiagnostico" />
+					</td>
+			</tr>
+			<tr>
+					<td></td>
+					<td>
+						<input type="submit" class="btn btn-default" value="Ingresar diagn&oacute;stico" />
+					</td>
+			</tr>
+			</table>
+		</form> 
+	<fieldset>
+		<h3>Resumen</h3>
+		<table class="table table-striped table-bordered">
+			<tr>
+				<td align="center">C&oacute;digo diagnostico: </td>
+				<td align="center">Paciente		   </td>
+				<td align="center">Fecha </td>
+				<td>Opciones		   </td>
+			</tr>
+			<!-- START listaEdicion -->
+				<tr>
+					<td align="center">{idhistoriaMedica} </td>
+					<td align="center">{nombrePeludo} </td>
+					<td align="center">{fechaDiagnostico} </td>
+					<td><a href="/catdog/historiaMedica/editar?id={idhistoriaMedica}"> <i class="glyphicon glyphicon-pencil"></i>  Editar</a> | 
+					<a href="/catdog/historiaMedica/eliminar?id={idhistoriaMedica}&pa={idFichaPaciente}">
+					 <i class="glyphicon glyphicon-remove"></i> Eliminar</a>
+					</td>
+				</tr>
+			<!-- END listaEdicion -->
+		</table>
+	</fieldset>
+</section>

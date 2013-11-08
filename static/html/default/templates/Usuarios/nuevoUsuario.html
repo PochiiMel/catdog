@@ -1,0 +1,82 @@
+<style>
+	table td{
+		padding-left: 15px;
+	}
+</style>
+<ol class="breadcrumb">
+            <li><a href="/catdog/sistema/inicio">Inicio</a></li>
+            <li class="active">Usuarios</li>
+</ol>
+
+<section align="center">
+	<form action="/catdog/usuarios/guardar" method="POST">
+	<fieldset>
+		<legend>Ingresar Usuario </legend>
+			<table >
+				<tr>
+					<td><label>Nick Name: </label></td>
+					<td>
+						<input type="text" required class="form-control" name="nickname" />
+					</td>
+				</tr>
+				<tr>
+					<td><label>Password: </label></td>
+					<td><input type="password" required class="form-control" name="password" /></td>
+				</tr>
+				<tr>
+					<td><label>Nombres: </label></td>
+					<td><input type="text" required class="form-control" name="nombre" /></td>
+				</tr>
+				<tr>
+					<td><label>Apellidos: </label></td>
+					<td><input type="text" required class="form-control" name="apellidos" /></td>
+				</tr>
+				
+				<tr>
+					<td><label>Tipo de Usuario: </label></td>
+					
+				<td>
+					<select name="tipoUsuario" class="form-control">
+							<!-- START combo -->
+							<option value="{idtipoUsuario}">{tipoUsuario} </option>
+							<!-- END combo -->
+					</select>
+				</td>
+
+
+				</tr>
+				<tr>
+					<td>
+					</td>
+					<td>
+					<br/>
+						<input type="submit" class="btn btn-primary" value="Registrar Usuario" />
+					</td>
+				</tr>
+			</table>
+	</fieldset>
+
+	<fieldset>
+		<legend>Opciones </legend>
+		<table class="table table-striped table-bordered">
+			<tr>
+				<td align="center">Id Usuario: </td>
+				<td align="center">Nick Name: </td>
+				<td align="center">Nombre  		   </td>
+			    <td align="center">Tipo Usuario 		   </td>
+			</tr>
+			<!-- START ListaUsuarios -->
+				<tr>
+					<td align="center">{idusuarios} </td>
+					<td align="center">{nickname} </td>
+					<td align="center">{nombre} {apellidos}</td>
+					
+					<td align="center">{tipoUsuario}</td>
+					<td align="center"><a href="/catdog/usuarios/editar?id={idusuarios}">Editar</a> | <a href="/catdog/usuarios/eliminar?id={idusuarios}">Eliminar</a>
+					</td>
+				</tr>
+			<!-- END ListaUsuarios -->
+		</table>
+	</fieldset>
+</form> 
+</section>

@@ -1,0 +1,36 @@
+<section align="center">
+	<form action="/catdog/padrinos/guardarCambios" method="POST">
+	<fielset>
+		<legend>Ingresar Datos de padrino </legend>
+			<table>
+			<!-- START listaPadrinos -->
+				<tr>
+					<td>C&oacute;digo de padrino:</td>
+					<td>
+						<input type="text" name="idpadrinos" value="{idpadrinos}" readonly />
+					</td>
+				</tr>
+				<tr>
+					<td>*Nombre completo:</td>
+					<td>
+						<input type="text" name="nombrePadrino" value="{nombrePadrino}" autofocus required />
+					</td>
+				</tr>
+				<tr>
+					<td>Tel&eacute;fono de contacto</td>
+					<td><input type="tel" name="telefonoContacto" value="{telefonoContacto}" /></td>
+				</tr>
+				<tr>
+					<td>E-mail</td>
+					<td><input type="email" name="email" value="{email}" /></td>
+				</tr>
+				<tr>
+					<td>
+						<input type="submit" value="Actualizar padrino" />
+					</td>
+				</tr>
+			</table>
+			<!-- END listaPadrinos -->
+	</fielset>
+</form> 
+</section>

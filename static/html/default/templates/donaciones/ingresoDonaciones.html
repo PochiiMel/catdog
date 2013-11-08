@@ -1,0 +1,86 @@
+<style>
+	table td{
+		padding-left: 0px;
+	}
+</style>
+
+<ol class="breadcrumb">
+            <li><a href="/catdog/sistema/inicio">Inicio</a></li>
+            <li><a href="/catdog/donaciones/panel">Panel</a></li>
+            <li class="active">Nueva donaci&oacute;n</li>
+</ol>
+<button class="btn btn-primary" onclick="verLista(event);" style="float: right;">Lista de donaciones</button>
+<br />
+<form action="/catdog/donaciones/guardarDonaciones" method="POST" >
+	<table >
+		<tr>
+			<td><label>Insumo: </label></td>
+			<td>
+				<select name="idinsumos" class="form-control">
+						<!-- START combo -->
+						<option value="{idinsumos}">{nombre_insumo}</option>
+						<!-- END combo -->
+				</select>
+			</td>
+		</tr>
+
+		<tr>
+			<td><label>Tipo Donacion: </label></td>
+			<td>
+				<select name="tipoDonacion" class="form-control" required>
+						<!-- START comboDonacion -->
+						<option value="{idtipoDonacion}">{tipoDonacion} </option>
+						<!-- END comboDonacion -->
+				</select>
+			</td>
+		</tr>
+
+
+		<tr>
+			<td><label>Cantidad: </label></td>
+						
+			<td>
+				<input type="text" name="cantidadDonacion" class="form-control" required/>
+					
+
+			</td>
+		</tr>
+
+		<tr>
+			<td><label>Fecha Donaci&oacute;n: </label></td>
+						
+			<td>
+				<input type="date" name="fechaDonacion" class="form-control" required/>
+					
+
+			</td>
+		</tr>
+
+		<tr>
+			<td><label>Donador: </label></td>
+						
+			<td>
+				<input type="text" name="donador" class="form-control" />
+					
+
+			</td>
+		</tr>
+		
+		
+
+		<tr>
+			<td colspan="2" style="text-align:right">
+			<br/>
+				<input type="reset" value="Limpiar" class="btn btn-default"/>
+				<input type="submit" value="Guardar" class="btn btn-primary"/>	
+			</td>
+		</tr>
+	</table>
+</form>
+<script>
+	function verLista(event)
+	{
+		event.preventDefault();
+		location.href="/catdog/donaciones/formularioListar";
+	}
+</script>

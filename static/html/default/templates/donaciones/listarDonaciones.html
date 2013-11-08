@@ -1,0 +1,44 @@
+<ol class="breadcrumb">
+            <li><a href="/catdog/sistema/inicio">Inicio</a></li>
+            <li><a href="/catdog/donaciones/panel">Panel</a></li>
+            <li class="active">Lista de donaciones</li>
+</ol>
+<table class="table table-striped table-bordered">
+	<tr>
+		<td>Insumo</td>
+		<td>Tipo Donaci&oacute;n</td>
+		<td>Cantidad Donaci&oacute;n</td>
+		<td>Fecha</td>
+		<td>Donador</td>
+		<td>Acciones</td>
+	</tr>
+
+	<!-- START lista_Donaciones -->
+		<tr>
+			<td>{nombre_insumo}</td>
+			<td>{tipoDonacion}</td>
+			<td>{cantidadDonacion} {nombreMedida}</td>
+			<td>{fechaDonacion}</td>
+			<td>{donador}</td>
+
+			<td>
+			<a href="/catdog/donaciones/listarDonacion?id={idDonacion}"><i class="glyphicon glyphicon-remove"></i>
+				Eliminar</a>
+			|
+			<a href="/catdog/donaciones/modificarDonaciones?id={idDonacion}"><i class="glyphicon glyphicon-edit"></i>
+				Modificar</a>
+		</td>
+		</tr>
+	<!-- END lista_Donaciones -->
+
+</table>
+<br />
+<button class="btn btn-primary" onclick="verLista(event);">Nueva donaci&oacute;n</button>
+<br />
+<script>
+	function verLista(event)
+	{
+		event.preventDefault();
+		location.href="/catdog/donaciones/formularioIngreso";
+	}
+</script>

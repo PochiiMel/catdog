@@ -1,0 +1,56 @@
+<ol class="breadcrumb">
+            <li><a href="/catdog/sistema/inicio">Inicio</a></li>
+            <li><a href="/catdog/fichaPaciente/listadoPeludo">Listado de peludos</a></li>
+            <li class="active">Medicamentos</li>
+</ol>
+
+<section>
+	<h3>Asignar medicamento</h3>
+	<form action="/catdog/medicinasPaciente/guardar" method="post">
+		<label>Paciente: </label>
+		<input type="text" class="form-control" value="{idPaciente}" name="idPaciente" readonly>
+		<label>Medicamento: </label>
+		<select class="form-control" name="idMedicinas">
+			<!-- START listaMedicinas -->
+				<option value="{idMedicinas}">{nombreMedicina}</option>
+			<!-- END listaMedicinas -->
+		</select>
+		<label>Estado: </label>
+		<select name="estado" class="form-control">
+			<option value="Aplicada">Aplicada </option>
+			<option value="No aplicada">No aplicada </option>
+		</select>
+		<br/>
+		<button class="btn btn-primary">Asignar</button>
+	</form>
+	<br/>
+	<br/>
+	<table class="table table-striped table-bordered">
+		<thead>
+			<tr>
+				<th>
+					Medicamento
+				</th>
+				<th>
+					Estado
+				</th>
+				<th>
+					Fecha de aplicaci&oacute;n
+				</th>
+			</tr>
+		</thead>
+		<!-- START medicamentosPaciente -->
+			<tr>
+				<td>
+					{nombreMedicina}
+				</td>
+				<td>
+					{estado}
+				</td>
+				<td>
+					{fecha}
+				</td>
+			</tr>
+		<!-- END medicamentosPaciente -->
+	</table>
+</section>

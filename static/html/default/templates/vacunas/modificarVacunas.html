@@ -1,0 +1,49 @@
+<style>
+	table td{
+		padding-left: 15px;
+	}
+</style>
+<form action="/catdog/vacunas/GuardarModificarVacunas" method="POST" >
+	<table >
+
+	<!-- START lista_modificar -->
+		<tr>
+			<td><label>Id : </label></td><td><input type="text" class="form-control" name="idvacunas" value="{idvacunas}" readonly /></td>
+		</tr>
+
+		<tr>
+			<td><label>Nombre Vacuna: </label></td>
+			<td>
+				<input type="text" name="nombreVacuna" class="form-control" value="{nombreVacuna}"/>
+			</td>
+		</tr>
+		
+		<tr>
+			<td><label>Frecuencia: </label></td>
+						
+			<td>
+				<input type="text" name="frecuencia" class="form-control" value="{frecuencia}" />
+					
+
+			</td>
+		</tr>
+
+		<tr>
+			<td><label>Descripci&oacute;n: </label></td>
+						
+			<td>
+				<input type="text" name="descripcion" class="form-control" value="{descripcion}" />
+					
+
+			</td>
+		</tr>
+		<!-- END lista_modificar -->
+		<tr>
+			<td colspan="2" style="text-align:right;">
+				<br/>
+				<input type="reset" value="Limpiar" class="btn btn-default"/>
+				<input type="submit" value="Guardar" class="btn btn-primary"/>	
+			</td>
+		</tr>
+	</table>
+</form>
